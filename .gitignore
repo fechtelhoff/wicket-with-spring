@@ -1,0 +1,10 @@
+# Verzeichnissen
+.git
+.idea
+out
+target
+
+# Dateien
+*.iml
+*.bak
+rebel.xml

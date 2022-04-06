@@ -1,0 +1,9 @@
+= Apache Wicket with Spring Boot
+
+== Links
+
+- https://wicket.apache.org
+- https://nightlies.apache.org/wicket/guide/9.x/single.html
+
+- https://dzone.com/articles/enhance-wicket-with-spring-boot
+- https://github.com/MarcGiffing/wicket-spring-boot
