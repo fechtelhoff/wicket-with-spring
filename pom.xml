@@ -44,13 +44,35 @@
 		<!-- Dependencies -->
 		<version.wicket-spring-boot-starter>3.1.6</version.wicket-spring-boot-starter>
 		<version.wicket.bootstrap>6.0.0-M6</version.wicket.bootstrap>
+		<version.org.mapstruct>1.4.2.Final</version.org.mapstruct>
 	</properties>
 
 	<dependencies>
-		<!-- Spring Boot Starter Web-->
+		<!-- Spring Boot Starter Data JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Spring Boot Starter Web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Spring Boot Starter Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- H2 -->
+		<!-- https://www.h2database.com -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<!-- Wicket Spring Boot Starter -->
@@ -80,6 +102,16 @@
 			<artifactId>wicket-bootstrap-themes</artifactId>
 			<version>${version.wicket.bootstrap}</version>
 		</dependency>
+
+		<!-- MapStruct -->
+		<!-- https://mapstruct.org -->
+		<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${version.org.mapstruct}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -122,6 +154,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!-- Compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${version.org.mapstruct}</version>
+						</path>
+					</annotationProcessorPaths>
+					<annotationProcessors>
+						<processor>org.mapstruct.ap.MappingProcessor</processor>
+					</annotationProcessors>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 

@@ -1,4 +1,4 @@
-package de.fechtelhoff.web.gui.page;
+package de.fechtelhoff.gui.common.page;
 
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.GenericWebPage;

@@ -1,4 +1,4 @@
-package de.fechtelhoff.web.gui.panel;
+package de.fechtelhoff.gui.common.panel;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Panel;

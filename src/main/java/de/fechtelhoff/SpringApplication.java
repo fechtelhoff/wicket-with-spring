@@ -1,14 +1,15 @@
-package de.fechtelhoff.web;
+package de.fechtelhoff;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-public class WicketApplication {
+public class SpringApplication {
 
 	public static void main(String[] args) {
+		//noinspection resource
 		new SpringApplicationBuilder()
-			.sources(WicketApplication.class)
+			.sources(SpringApplication.class)
 			.run(args);
 	}
 }

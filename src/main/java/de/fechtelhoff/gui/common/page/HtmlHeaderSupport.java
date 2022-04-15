@@ -1,9 +1,7 @@
-package de.fechtelhoff.web.gui.page;
+package de.fechtelhoff.gui.common.page;
 
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.head.MetaDataHeaderItem;
-import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
 
@@ -14,7 +12,6 @@ public final class HtmlHeaderSupport {
 	}
 
 	public static void renderHead(final IHeaderResponse response) {
-		addFaviconToHtmlHeader(response);
 		addCssToHtmlHeader(response);
 	}
 
@@ -22,16 +19,5 @@ public final class HtmlHeaderSupport {
 		final ResourceReference resourceReference = new PackageResourceReference(HtmlHeaderSupport.class, "style.css");
 		final CssHeaderItem headerItem = CssHeaderItem.forReference(resourceReference);
 		response.render(headerItem);
-	}
-
-	private static void addFaviconToHtmlHeader(final IHeaderResponse response) {
-		final String fileReference = getContextPath() + "/favicon.ico";
-		final MetaDataHeaderItem headerItem = MetaDataHeaderItem.forLinkTag("icon", fileReference);
-		headerItem.addTagAttribute("type", "image/x-icon");
-		response.render(headerItem);
-	}
-
-	private static String getContextPath() {
-		return RequestCycle.get().getRequest().getContextPath();
 	}
 }

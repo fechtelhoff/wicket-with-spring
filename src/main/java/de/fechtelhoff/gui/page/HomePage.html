@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<title>Home Page</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row my-3">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<h1>Home Page</h1>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row my-3">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<h2>Links</h2>
+					<div id="links">
+						<table class="table-condensed" aria-describedby="links">
+							<thead>
+							<tr><th scope="row"></th></tr>
+							</thead>
+							<tbody>
+							<tr wicket:id="listView">
+								<td>
+									<a wicket:id="id">
+										<!--suppress RequiredAttributes -->
+										<wicket:container wicket:id="label">Label</wicket:container>
+									</a>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div wicket:id="wicketSettingsPanel"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

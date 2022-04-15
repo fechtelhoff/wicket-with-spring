@@ -1,4 +1,4 @@
-package de.fechtelhoff.web;
+package de.fechtelhoff.gui;
 
 import org.apache.wicket.protocol.http.WebApplication;
 import com.giffing.wicket.spring.boot.context.extensions.ApplicationInitExtension;
